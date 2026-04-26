@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehal Shiral | Full-Stack Software Engineer</title>
+    <style>
+        :root {
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+
+        /* --- Layout Structures --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 30px; font-weight: 800; background: linear-gradient(to right, #fff, var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* --- Navigation --- */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--border); padding: 15px 0; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* --- Hero Section --- */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 70%); }
+        .hero-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 25px; object-fit: cover; box-shadow: 0 0 30px var(--accent-glow); }
+        .hero h1 { font-size: 4.5rem; font-weight: 900; margin-bottom: 10px; line-height: 1; }
+        .hero p { font-size: 1.2rem; color: var(--accent); font-weight: 600; letter-spacing: 4px; margin-bottom: 20px; }
+        .quote { font-style: italic; color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* --- Grid & Cards --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding-top: 40px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); padding: 35px; border-radius: 24px; position: relative; transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1); }
+        .card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        
+        .img-placeholder { width: 100%; height: 200px; background: #1e293b; border-radius: 16px; margin-bottom: 20px; overflow: hidden; border: 1px solid var(--border); }
+        .img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* --- Stats/Skills --- */
+        .skill-tag { display: inline-block; padding: 6px 14px; background: rgba(56, 189, 248, 0.1); color: var(--accent); border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin: 5px; }
+
+        /* --- Specialized Columns --- */
+        .about-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
+        .academic-badge { background: var(--accent); color: #000; padding: 2px 10px; border-radius: 4px; font-weight: 900; margin-left: 10px; }
+
+        footer { text-align: center; padding: 80px 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.9rem; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .about-flex { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">SNEHAL<span>SHIRAL</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certs">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <img src="profile.jpg" alt="Snehal Shiral" class="hero-img">
+            <p>SOFTWARE ENGINEERING STUDENT</p>
+            <h1>Snehal Shiral</h1>
+            <div class="quote">"Building secure, scalable, and intelligent systems with an optimistic mindset and a eager for learning."</div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-flex">
+            <div class="card">
+                <img src="about-side.jpg" alt="Snehal Work" style="width:100%; border-radius:15px;">
+                <h3 style="margin-top:20px;">Personality</h3>
+                <p style="color:var(--text-secondary)">Optimistic, adaptive, and a continuous learner. Focused on mastering the full-stack ecosystem.</p>
+            </div>
+            <div>
+                <h2 class="section-title">About Me</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 25px;">I am pursuing my **B.Tech at MIT Academy of Engineering (MITAOE), Alandi, Pune**. My mission is to bridge the gap between AI research and practical software products.</p>
+                
+                <div class="card">
+                    <h3>Education History</h3>
+                    <ul style="list-style:none; margin-top:15px;">
+                        <li style="margin-bottom:15px;"><strong>MITAOE, Pune:</strong> Pursuing B.Tech Software Engineering</li>
+                        <li style="margin-bottom:15px;"><strong>Mauli Junior College, Akola:</strong> 12th HSC <span class="academic-badge">93%</span></li>
+                        <li style="margin-bottom:15px;"><strong>Rajeshwar Convent, Akola:</strong> 10th SSC <span class="academic-badge">95.7%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">Technical & Soft Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Technical Knowledge</h3>
+                <div style="margin-top:20px;">
+                    <span class="skill-tag">Python (Cisco Certified)</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Full Stack Architecture</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <div style="margin-top:20px;">
+                    <span class="skill-tag">Public Speaking</span>
+                    <span class="skill-tag">German Language (Fluent)</span>
+                    <span class="skill-tag">Debate Champion</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">State Level Fencing Player</span>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Public Speaking & Competitions</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="img-placeholder">
+                    <img src="debate.jpg" alt="Debate Winner">
+                </div>
+                <h3>Debate Champion</h3>
+                <p>3-year consecutive winner of District Level Debate Competition in Akola.</p>
+            </div>
+            <div class="card">
+                <div class="img-placeholder">
+                    <img src="eloquence.jpg" alt="Eloquence Competition">
+                </div>
+                <h3>Eloquence Awards</h3>
+                <p>Winner of multiple district-level eloquence competitions.</p>
+            </div>
+            <div class="card">
+                <div class="img-placeholder">
+                    <img src="poster-win.jpg" alt="Poster Presentation">
+                </div>
+                <h3>Poster Presentation</h3>
+                <p>1st Runner Up in the MITAOE College Poster Presentation Competition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Engineering Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Pink Firewall</h3>
+                <p>A night-safety alert system for women using Python and Firebase for real-time SOS triggers.</p>
+            </div>
+            <div class="card">
+                <h3>Smart Lost & Found (AI)</h3>
+                <p>Utilizing AI technology for an intelligent item-tracking and recognition system.</p>
+            </div>
+            <div class="card">
+                <h3>Quantum Greenhouse</h3>
+                <p>High-efficiency agricultural research utilizing Quantum Dot tech for sustainable farming.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud Finance Ledger</h3>
+                <p>A Full-stack application for secure financial tracking and data visualization.</p>
+            </div>
+            <div class="card">
+                 <h3>Let's Swap College Goodies Exchanging Platform</h3>
+                 <p>A web platform where clg students can connect,swap and earn.</p> 
+        </div>
+    </section>
+
+    <section id="certs" class="container">
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="card">
+                <div class="img-placeholder"><img src="nasscom.png" alt="Nasscom"></div>
+                <h3>NASSCOM Certificate</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="cisco-py1.png" alt="Cisco Py1"></div>
+                <h3>Cisco Python Essential 1</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="cisco-py2.png" alt="Cisco Py2"></div>
+                <h3>Cisco Python Essential 2</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="ibm-ai.png" alt="IBM AI"></div>
+                <h3>IBM: AI Fundamentals</h3>
+            </div>
+          
+            <div class="card">
+                <div class="img-placeholder"><img src="claude101.png" alt="Claude 101"></div>
+                <h3>Claude 101 Certification</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="ai-fluency1.png" alt="AI Fluency"></div>
+                <h3>AI Fluency: Frameworks</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="ai-fluency2.png" alt="AI Nonprofits"></div>
+                <h3>AI Fluency: Nonprofits</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="ai-fluency3.png" alt="AI Students"></div>
+                <h3>AI Fluency: Students</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="js-learn.png" alt="Learn JS"></div>
+                <h3>Learn JavaScript (IBM)</h3>
+            </div>
+            <div class="card">
+                <div class="img-placeholder"><img src="career-ess.png" alt="Career Essentials"></div>
+                <h3>Career Management</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="card" style="text-align: center;">
+            <h3>Snehal Surendra Shiral</h3>
+            <p>Full-Stack Developer Aspirant</p>
+            <div style="margin-top: 30px;">
+                <p>📞 +91 9307392854</p>
+                <p>📧 snehalshiral957@gmail.com</p>
+                <p>📍 Borakhedi, Borakhedi Tq.Motala, Buldhana - 443103</p>
+                <br>
+                <a href="https://www.linkedin.com/in/snehal-shiral-scholar" target="_blank" style="color: var(--accent); font-weight: bold; text-decoration: none; border: 1px solid var(--accent); padding: 10px 20px; border-radius: 8px;">LINKEDIN PROFILE</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Snehal Shiral | Software Engineering | MITAOE Pune</p>
+    </footer>
+
+</body>
+</html>
